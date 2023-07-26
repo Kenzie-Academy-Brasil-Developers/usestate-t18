@@ -1,10 +1,10 @@
-export const Select = ({ children, value }) => {
-    return (
-        <div role="menu">
-            <p>{value === "" ? "Selecione uma opção" : value}</p>
-            <ul>
-                {children}               
-            </ul>
-        </div>
-    )
-}
+export const Select = ({children, label, id, value, setValue}) => {
+   return (
+      <div>
+         <label htmlFor={id}>{label}</label>
+         <select id={id} name={id} value={value} onChange={(e) => setValue(e.target.value)}>
+            {children}
+         </select>
+      </div>
+   );
+};
