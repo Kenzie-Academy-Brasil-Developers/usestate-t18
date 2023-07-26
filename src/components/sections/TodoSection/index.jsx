@@ -18,6 +18,7 @@ export const TodoSection = () => {
       setNoteList([...noteList, newNote]);
    };
    
+   // Quais componentes precisam deste estado?
 
    const removeNote = (removeId) => {
       //splice é mutável (Não poderemos utilizar)
