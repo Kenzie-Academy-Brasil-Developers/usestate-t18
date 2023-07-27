@@ -1,0 +1,17 @@
+.flexBox{
+    padding: 3rem 0;
+    display: flex;    
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & > div:first-child{
+        width: clamp(0px, 100%, 385px);
+    }
+
+    & > div:last-child{
+        min-width: clamp(0px, 100%, 350px);
+        flex-grow: 1;
+    }
+}

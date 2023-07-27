@@ -1,0 +1,16 @@
+.numberBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    padding: 1.25rem 2rem;
+
+    border-radius: 255px;
+    border: 1px solid var(--color-blue);
+
+    @media (min-width: 1024px) {
+        justify-content: flex-end;
+    }
+}

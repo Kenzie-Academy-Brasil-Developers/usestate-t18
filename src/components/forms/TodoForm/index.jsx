@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Input } from "../Input";
 import { Select } from "../Select";
 import { Textarea } from "../Textarea";
+import styles from "./style.module.scss";
 
 export const TodoForm = ({ addNote }) => {
    const [title, setTitle] = useState("");
@@ -17,7 +18,7 @@ export const TodoForm = ({ addNote }) => {
    };
 
    return (
-      <div>
+      <div className={styles.formBox}>
          <h2 className="title two">Cadastre uma nota</h2>
          <form onSubmit={submit}>
             <Input
@@ -27,6 +28,7 @@ export const TodoForm = ({ addNote }) => {
                id="title"
                value={title}
                setValue={setTitle}
+               required={true}
             />
             <Textarea
                label="Mensagem:"
@@ -34,6 +36,7 @@ export const TodoForm = ({ addNote }) => {
                id="message"
                value={message}
                setValue={setMessage}
+               required={true}
             />
             <Select
                label="Categoria: "
